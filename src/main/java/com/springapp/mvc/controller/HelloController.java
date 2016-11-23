@@ -33,13 +33,18 @@ public class HelloController {
         return "dba";
     }
 
+    @RequestMapping(value = "/login", method = RequestMethod.GET)
+    public String loginPage() {
+        return "login";
+    }
+
     @RequestMapping(value = "/logout", method = RequestMethod.GET)
     public String logoutPage(HttpServletRequest request, HttpServletResponse response) {
         Authentication auth = SecurityContextHolder.getContext().getAuthentication();
         if (auth != null) {
             new SecurityContextLogoutHandler().logout(request, response, auth);
         }
-        return "welcome";
+        return "redirect:/login?logout";
     }
 
     @RequestMapping(value = "/Access_Denied", method = RequestMethod.GET)
