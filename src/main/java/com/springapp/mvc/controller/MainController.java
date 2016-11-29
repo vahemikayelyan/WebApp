@@ -14,7 +14,7 @@ import javax.servlet.http.HttpServletResponse;
 
 @Controller
 @RequestMapping("/")
-public class HelloController {
+public class MainController {
     @RequestMapping(value = {"/", "/home"}, method = RequestMethod.GET)
     public String homePage(ModelMap model) {
         model.addAttribute("greeting", "Hi, Welcome to mysite. ");

@@ -2,6 +2,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
+    <link href="<c:url value="/resources/styles/bootstrap.min.css" />" rel="stylesheet">
     <title></title>
 </head>
 <body>
@@ -34,8 +35,7 @@
                     <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
 
                     <div class="form-actions">
-                        <input type="submit"
-                               class="btn btn-block btn-primary btn-default" value="Log in">
+                        <input type="submit" class="btn btn-block btn-primary btn-default" value="Log in">
                     </div>
                 </form>
             </div>
