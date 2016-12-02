@@ -12,22 +12,16 @@
         <put-attribute name="footer" value="/WEB-INF/views/tiles/template/footer.jsp"/>
     </definition>
 
-    <!-- Home Page -->
-    <definition name="home" extends="main-definition">
-        <put-attribute name="title" value="Welcome"/>
-        <put-attribute name="body" value="/WEB-INF/views/pages/home.jsp"/>
-    </definition>
-
     <!-- Login Page -->
     <definition name="login" extends="main-definition">
         <put-attribute name="title" value="Login"/>
         <put-attribute name="body" value="/WEB-INF/views/pages/login.jsp"/>
     </definition>
 
-    <!-- Admin Page -->
-    <definition name="admin" extends="main-definition">
-        <put-attribute name="title" value="Admin"/>
-        <put-attribute name="body" value="/WEB-INF/views/pages/admin.jsp"/>
+    <!-- Login Page -->
+    <definition name="userslist" extends="main-definition">
+        <put-attribute name="title" value="userslist"/>
+        <put-attribute name="body" value="/WEB-INF/views/pages/userslist.jsp"/>
     </definition>
 
     <!-- Access Denied -->

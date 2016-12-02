@@ -14,6 +14,9 @@
         <spring.version>4.3.4.RELEASE</spring.version>
         <apachetiles.version>3.0.5</apachetiles.version>
         <bootstrap.version>3.3.7</bootstrap.version>
+        <mysql.driver.version>6.0.5</mysql.driver.version>
+        <hibernate.version>5.2.5.Final</hibernate.version>
+        <javax.validation.version>1.1.0.Final</javax.validation.version>
     </properties>
 
     <dependencies>
@@ -76,6 +79,14 @@
             <version>4.0.3.RELEASE</version>
         </dependency>
 
+        <!-- MySQL JDBC driver -->
+        <!-- http://mvnrepository.com/artifact/mysql/mysql-connector-java -->
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>${mysql.driver.version}</version>
+        </dependency>
+
         <!-- Apache Tiles -->
         <dependency>
             <groupId>org.apache.tiles</groupId>
@@ -96,6 +107,25 @@
             <groupId>org.apache.tiles</groupId>
             <artifactId>tiles-jsp</artifactId>
             <version>${apachetiles.version}</version>
+        </dependency>
+
+        <!-- Hibernate -->
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-core</artifactId>
+            <version>${hibernate.version}</version>
+        </dependency>
+
+        <!-- jsr303 validation -->
+        <dependency>
+            <groupId>javax.validation</groupId>
+            <artifactId>validation-api</artifactId>
+            <version>${javax.validation.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-validator</artifactId>
+            <version>5.3.3.Final</version>
         </dependency>
 
         <!-- Bootstrap 3.3.7 -->
