@@ -18,14 +18,14 @@
 				<form class="form-horizontal" action="${loginUrl}" method="post">
 					<div style="margin-bottom: 25px" class="input-group">
 						<span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-						<input id="login-username" type="text" class="form-control" name="ssoId" value=""
-							   placeholder="username or email">
+						<input type="text" class="form-control" id="username" name="ssoId" placeholder="Enter Username"
+							   required>
 					</div>
 
 					<div style="margin-bottom: 25px" class="input-group">
 						<span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
-						<input id="login-password" type="password" class="form-control" name="password"
-							   placeholder="password">
+						<input type="password" class="form-control" id="password" name="password"
+							   placeholder="Enter Password" required>
 					</div>
 
 					<div class="input-group">

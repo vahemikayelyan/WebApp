@@ -18,10 +18,22 @@
         <put-attribute name="body" value="/WEB-INF/views/pages/login.jsp"/>
     </definition>
 
-    <!-- Login Page -->
+    <!-- Users list Page -->
     <definition name="userslist" extends="main-definition">
-        <put-attribute name="title" value="userslist"/>
+        <put-attribute name="title" value="Users list"/>
         <put-attribute name="body" value="/WEB-INF/views/pages/userslist.jsp"/>
+    </definition>
+
+    <!-- Registration Page -->
+    <definition name="registration" extends="main-definition">
+        <put-attribute name="title" value="Registration"/>
+        <put-attribute name="body" value="/WEB-INF/views/pages/registration.jsp"/>
+    </definition>
+
+    <!-- Registration Success Page -->
+    <definition name="registrationsuccess" extends="main-definition">
+        <put-attribute name="title" value="Registration success"/>
+        <put-attribute name="body" value="/WEB-INF/views/pages/registrationsuccess.jsp"/>
     </definition>
 
     <!-- Access Denied -->

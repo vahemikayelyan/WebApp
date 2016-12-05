@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.core.env.Environment;
 import org.springframework.security.authentication.AuthenticationTrustResolver;
 import org.springframework.security.authentication.AuthenticationTrustResolverImpl;
 import org.springframework.security.authentication.dao.DaoAuthenticationProvider;
@@ -29,6 +30,9 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
     PersistentTokenRepository tokenRepository;
 
     @Autowired
+    private Environment environment;
+
+    @Autowired
     public void configureGlobalSecurity(AuthenticationManagerBuilder auth) throws Exception {
         auth.userDetailsService(userDetailsService);
         auth.authenticationProvider(authenticationProvider());
@@ -42,7 +46,8 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
                 .access("hasRole('ADMIN') or hasRole('DBA')").and().formLogin().loginPage("/login")
                 .loginProcessingUrl("/login").usernameParameter("ssoId").passwordParameter("password").and()
                 .rememberMe().rememberMeParameter("remember-me").tokenRepository(tokenRepository)
-                .tokenValiditySeconds(86400).and().csrf().and().exceptionHandling().accessDeniedPage("/Access_Denied");
+                .tokenValiditySeconds(86400).and().csrf().and().exceptionHandling().accessDeniedPage("/Access_Denied").and()
+                .sessionManagement().maximumSessions(Integer.valueOf(environment.getRequiredProperty("maximumSessions")));
     }
 
     @Bean
@@ -69,5 +74,4 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
     public AuthenticationTrustResolver getAuthenticationTrustResolver() {
         return new AuthenticationTrustResolverImpl();
     }
-
 }

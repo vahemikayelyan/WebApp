@@ -17,6 +17,7 @@
         <mysql.driver.version>6.0.5</mysql.driver.version>
         <hibernate.version>5.2.5.Final</hibernate.version>
         <javax.validation.version>1.1.0.Final</javax.validation.version>
+        <springsecurity.version>4.2.0.RELEASE</springsecurity.version>
     </properties>
 
     <dependencies>
@@ -71,12 +72,17 @@
         <dependency>
             <groupId>org.springframework.security</groupId>
             <artifactId>spring-security-web</artifactId>
-            <version>4.2.0.RELEASE</version>
+            <version>${springsecurity.version}</version>
         </dependency>
         <dependency>
             <groupId>org.springframework.security</groupId>
             <artifactId>spring-security-config</artifactId>
-            <version>4.0.3.RELEASE</version>
+            <version>${springsecurity.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>spring-security-taglibs</artifactId>
+            <version>${springsecurity.version}</version>
         </dependency>
 
         <!-- MySQL JDBC driver -->
