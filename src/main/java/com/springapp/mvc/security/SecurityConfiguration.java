@@ -44,8 +44,8 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
                 .antMatchers("/backend/", "/backend").access("hasRole('ADMIN') or hasRole('DBA')")
                 .antMatchers("/backend/list/**", "/backend/edit-user-*/**").access("hasRole('ADMIN') or hasRole('DBA')")
                 .antMatchers("/backend/newuser/**", "/backend/delete-user-*/**").access("hasRole('ADMIN')").and()
-                .formLogin().loginPage("/login").loginProcessingUrl("/login").usernameParameter("ssoId").passwordParameter("password").and()
-                .rememberMe().rememberMeParameter("remember-me").tokenRepository(tokenRepository)
+                .formLogin().loginPage("/login").loginProcessingUrl("/login").defaultSuccessUrl("/backend").usernameParameter("ssoId")
+                .passwordParameter("password").and().rememberMe().rememberMeParameter("remember-me").tokenRepository(tokenRepository)
                 .tokenValiditySeconds(86400).and().csrf().and().exceptionHandling().accessDeniedPage("/backend/Access_Denied").and()
                 .sessionManagement().maximumSessions(Integer.valueOf(environment.getRequiredProperty("maximumSessions")));
     }
