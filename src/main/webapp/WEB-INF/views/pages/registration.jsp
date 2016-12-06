@@ -1,7 +1,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <div class="generic-container">
-    <%@include file="authheader.jsp" %>
+    <%@include file="authHeader.jsp" %>
 
     <div class="well lead">User Registration Form</div>
     <form:form method="POST" modelAttribute="user" class="form-horizontal">
@@ -99,11 +99,11 @@
                 <c:choose>
                     <c:when test="${edit}">
                         <input type="submit" value="Update" class="btn btn-primary btn-sm"/> or <a
-                            href="<c:url value='/list' />">Cancel</a>
+                            href="<c:url value="/backend/list" />">Cancel</a>
                     </c:when>
                     <c:otherwise>
                         <input type="submit" value="Register" class="btn btn-primary btn-sm"/> or <a
-                            href="<c:url value='/list' />">Cancel</a>
+                            href="<c:url value="/backend/list" />">Cancel</a>
                     </c:otherwise>
                 </c:choose>
             </div>

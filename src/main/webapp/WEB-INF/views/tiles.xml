@@ -12,34 +12,53 @@
         <put-attribute name="footer" value="/WEB-INF/views/tiles/template/footer.jsp"/>
     </definition>
 
+    <!-- Home Page -->
+    <definition name="home" extends="main-definition">
+        <put-attribute name="title" value="Home"/>
+        <put-attribute name="body" value="/WEB-INF/views/pages/home.jsp"/>
+        <put-attribute name="class" value="home-section"/>
+    </definition>
+
     <!-- Login Page -->
     <definition name="login" extends="main-definition">
         <put-attribute name="title" value="Login"/>
         <put-attribute name="body" value="/WEB-INF/views/pages/login.jsp"/>
+        <put-attribute name="class" value="login-section"/>
     </definition>
 
     <!-- Users list Page -->
-    <definition name="userslist" extends="main-definition">
+    <definition name="usersList" extends="main-definition">
         <put-attribute name="title" value="Users list"/>
-        <put-attribute name="body" value="/WEB-INF/views/pages/userslist.jsp"/>
+        <put-attribute name="body" value="/WEB-INF/views/pages/usersList.jsp"/>
+        <put-attribute name="class" value="list-section"/>
     </definition>
 
     <!-- Registration Page -->
     <definition name="registration" extends="main-definition">
         <put-attribute name="title" value="Registration"/>
         <put-attribute name="body" value="/WEB-INF/views/pages/registration.jsp"/>
+        <put-attribute name="class" value="registration-section"/>
+    </definition>
+
+    <!-- Signup Page -->
+    <definition name="signup" extends="main-definition">
+        <put-attribute name="title" value="Sign Up"/>
+        <put-attribute name="body" value="/WEB-INF/views/pages/signup.jsp"/>
+        <put-attribute name="class" value="signup-section"/>
     </definition>
 
     <!-- Registration Success Page -->
-    <definition name="registrationsuccess" extends="main-definition">
+    <definition name="registrationSuccess" extends="main-definition">
         <put-attribute name="title" value="Registration success"/>
-        <put-attribute name="body" value="/WEB-INF/views/pages/registrationsuccess.jsp"/>
+        <put-attribute name="body" value="/WEB-INF/views/pages/registrationSuccess.jsp"/>
+        <put-attribute name="class" value="registration-success-section"/>
     </definition>
 
     <!-- Access Denied -->
     <definition name="accessDenied" extends="main-definition">
         <put-attribute name="title" value="Access Denied"/>
         <put-attribute name="body" value="/WEB-INF/views/pages/accessDenied.jsp"/>
+        <put-attribute name="class" value="access-denied-section"/>
     </definition>
 
 </tiles-definitions>

@@ -40,13 +40,13 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
-        http.authorizeRequests().antMatchers("/", "/list")
-                .access("hasRole('USER') or hasRole('ADMIN') or hasRole('DBA')")
-                .antMatchers("/newuser/**", "/delete-user-*").access("hasRole('ADMIN')").antMatchers("/edit-user-*")
-                .access("hasRole('ADMIN') or hasRole('DBA')").and().formLogin().loginPage("/login")
-                .loginProcessingUrl("/login").usernameParameter("ssoId").passwordParameter("password").and()
+        http.authorizeRequests()
+                .antMatchers("/backend/", "/backend").access("hasRole('ADMIN') or hasRole('DBA')")
+                .antMatchers("/backend/list/**", "/backend/edit-user-*/**").access("hasRole('ADMIN') or hasRole('DBA')")
+                .antMatchers("/backend/newuser/**", "/backend/delete-user-*/**").access("hasRole('ADMIN')").and()
+                .formLogin().loginPage("/login").loginProcessingUrl("/login").usernameParameter("ssoId").passwordParameter("password").and()
                 .rememberMe().rememberMeParameter("remember-me").tokenRepository(tokenRepository)
-                .tokenValiditySeconds(86400).and().csrf().and().exceptionHandling().accessDeniedPage("/Access_Denied").and()
+                .tokenValiditySeconds(86400).and().csrf().and().exceptionHandling().accessDeniedPage("/backend/Access_Denied").and()
                 .sessionManagement().maximumSessions(Integer.valueOf(environment.getRequiredProperty("maximumSessions")));
     }
 

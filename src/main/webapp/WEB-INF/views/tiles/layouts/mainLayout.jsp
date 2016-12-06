@@ -7,7 +7,7 @@
     <link href="<c:url value="/webjars/bootstrap/3.3.7/css/bootstrap.min.css" />" rel="stylesheet">
     <link href="<c:url value="/resources/css/main.css" />" rel="stylesheet">
 </head>
-<body>
+<body class="<tiles:insertAttribute name="class"/>">
 
 <header id="header">
     <tiles:insertAttribute name="header"/>
