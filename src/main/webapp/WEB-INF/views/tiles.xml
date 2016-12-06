@@ -29,7 +29,7 @@
     <!-- Users list Page -->
     <definition name="usersList" extends="main-definition">
         <put-attribute name="title" value="Users list"/>
-        <put-attribute name="body" value="/WEB-INF/views/pages/userslist.jsp"/>
+        <put-attribute name="body" value="/WEB-INF/views/pages/usersList.jsp"/>
         <put-attribute name="class" value="list-section"/>
     </definition>
 
