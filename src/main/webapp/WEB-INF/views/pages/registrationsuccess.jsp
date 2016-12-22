@@ -8,6 +8,6 @@
     </div>
 
     <span class="well floatRight">
-        Go to <a href="<c:url value='/backend/list' />">Users List</a>
+        Go to <a href="<c:url value="/backend/list" />">Users List</a>
     </span>
 </div>

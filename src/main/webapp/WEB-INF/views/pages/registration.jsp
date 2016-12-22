@@ -95,6 +95,19 @@
         </div>
 
         <div class="row">
+            <div class="form-group col-md-12">
+                <label class="col-md-3 control-lable" for="enabled">Enabled</label>
+
+                <div class="col-md-7">
+                    <form:checkbox path="enabled" id="enabled" class="form-control input-sm"/>
+                    <div class="has-error">
+                        <form:errors path="enabled" class="help-inline"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
             <div class="form-actions floatRight">
                 <c:choose>
                     <c:when test="${edit}">

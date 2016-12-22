@@ -134,6 +134,13 @@
             <version>5.3.3.Final</version>
         </dependency>
 
+        <!-- https://mvnrepository.com/artifact/javax.mail/mail -->
+        <dependency>
+            <groupId>javax.mail</groupId>
+            <artifactId>mail</artifactId>
+            <version>1.4.7</version>
+        </dependency>
+
         <!-- Bootstrap 3.3.7 -->
         <dependency>
             <groupId>org.webjars</groupId>

@@ -24,7 +24,7 @@
             </thead>
             <tbody>
             <c:forEach items="${users}" var="user">
-                <tr>
+                <tr <c:if test="${!user.enabled}">style="background: aliceblue;" </c:if>>
                     <td>${user.firstName}</td>
                     <td>${user.lastName}</td>
                     <td>${user.email}</td>

@@ -1,13 +1,13 @@
 package com.springapp.mvc.service;
 
-import java.util.List;
-
 import com.springapp.mvc.dao.UserDao;
 import com.springapp.mvc.model.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+
+import java.util.List;
 
 
 @Service("userService")
@@ -50,6 +50,7 @@ public class UserServiceImpl implements UserService {
             entity.setLastName(user.getLastName());
             entity.setEmail(user.getEmail());
             entity.setUserProfiles(user.getUserProfiles());
+            entity.setEnabled(user.isEnabled());
         }
     }
 
