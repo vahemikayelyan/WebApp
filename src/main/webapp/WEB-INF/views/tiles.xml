@@ -50,7 +50,7 @@
     <!-- Registration Success Page -->
     <definition name="registrationSuccess" extends="main-definition">
         <put-attribute name="title" value="Registration success"/>
-        <put-attribute name="body" value="/WEB-INF/views/pages/registrationsuccess.jsp"/>
+        <put-attribute name="body" value="/WEB-INF/views/pages/registrationSuccess.jsp"/>
         <put-attribute name="class" value="registration-success-section"/>
     </definition>
 
